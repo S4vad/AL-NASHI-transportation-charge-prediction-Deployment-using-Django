@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    </head>
+    <body>
+        <div id="first_page">
+
+            <div class="navbar">
+                <img src="{% static 'images/logo.png' %}" class='logo'>
+                <nav>
+                    
+                    <ul>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <li><a href="{% url 'index' %}"><b>Home</b></a></li>
+                        <li><a href="{% url 'about' %}"><b>About</b></a></li>
+                        <li><a href="{% url 'prediction' %}"><b>Prediction</b></a></li>
+                        <li><a href="{% url 'contact' %}"><b>Contact Us</b></a></li>
+                    </ul>
+                    
+                </nav>
+
+                
+            </div>
+            <div class='section1'>
+                <h1><b>ABOUT US<b></h1>
+                <p><b>Al<span style="color:#DE970B ; font-weight: bold;"> Nashi</span> is a leading transportation company dedicated <br>to providing efficient and
+                    reliable transportation solutions.<br> With years of experience in the industry, we have built <br>
+                    a reputation for excellence,serving our clients with utmost<br> professionalism and delivering 
+                    on our promises.</p>
+                <button class='h2'>Read More</button>
+
+            </div>
+            <div class='img'>
+                <img src='{% static "images/plane.jpeg" %}' class='plane'>
+                <img src='{% static "images/truck.jpeg" %}' class='truck'>
+                <img src='{% static "images/ship.jpeg" %}' class='ship'>
+            </div>
+        </div>
+
+
+
+            
+
+    
+
+
+        
+
+          
+        
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>

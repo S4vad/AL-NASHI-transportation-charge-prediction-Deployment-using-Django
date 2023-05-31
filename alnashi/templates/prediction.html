@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/prediction.css' %}">
+    </head>
+    <body>
+        <div id="first_page">
+
+            <div class="navbar">
+                <img src="{% static 'images/logo.png' %}" class='logo'>
+                <nav>
+                    
+                    <ul>
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <li><a href="{% url 'index' %}"><b>Home</b></a></li>
+                        <li><a href="{% url 'about' %}"><b>About</b></a></li>
+                        <li><a href="{% url 'prediction' %}"><b>Prediction</b></a></li>
+                        <li><a href="{% url 'contact' %}"><b>Contact Us</b></a></li>
+                    </ul>
+                    
+                </nav>
+
+                
+            </div>
+            <div class='section1'>
+                <h1>Al <span style='color:#DE970B ; font-weight: bold;'>Nashi</span> transportation charge prediction</h1>
+                <p class='p'>The page help to predict Al nashi transportation charge prediction using various features such as From ,Destination,vehicle type</p>
+
+            </div>
+            <div class='empty'>
+            </div>
+
+        </div>
+        <div class='content'>
+            <div class='form'>
+                <form method='POST' action=''>
+                    {% csrf_token %}
+                    From:
+                    <select name="From" id="From">
+                        <option value='Riyadh'>Riyadh</option>
+                    </select>
+                    <br>
+                    <br>
+                    Destination:
+                    <select name='Destination' id='Destination'>
+                        <option value='MADEENA'>MADEENA</option>
+                        <option value='BURIDHA'>BURIDHA</option>
+                        <option value="JEDDAH">JEDDAH</option>
+                        <option value="NAJRAN">NAJRAN</option>
+                        <option value="YANBU">YANBU</option>
+                        <option value="AL JOUF">AL JOUF</option>
+                        <option value="ARAR">ARAR</option>
+                        <option value="HAIL">HAIL</option>
+                        <option value="QURIYATH">QURIYATH</option>
+                        <option value="HAFER AL BATHEN">HAFER AL BATHEN</option>
+                        <option value="ABAHA">ABAHA</option>
+                        <option value="TABUK">TABUK</option>
+                        <option value="MAKKAH">MAKKAH</option>
+                        <option value="DAWADMI">DAWADMI</option>
+                        <option value="AL KHARAJ">AL KHARAJ</option>
+                        <option value="DAMMAM">DAMMAM</option>
+                        <option value="LOCAL TRANSFER">LOCAL TRANSFER</option>
+                        <option value="MAJMA">MAJMA</option>
+                        <option value="TAIF">TAIF</option>
+                        <option value="JIZAN">JIZAN</option>
+                        <option value="AL QASEE8M">AL QASEEM</option>
+                        <option value="WADI DAWASSIR">WADI DAWASSIR</option>
+                        <option value="WADI DAWASSIR (DEDICATED)">WADI DAWASSIR (DEDICATED)</option>
+                        <option value="NAJRAN (DEDICATED)">NAJRAN (DEDICATED)</option>
+                        <option value="DAWADMI (DEDICATED)">DAWADMI (DEDICATED)</option>
+                    </select>
+                    <br>
+                    <br>
+                    Vehicle_Type:
+                    <select name="Vehicle_Type" id='Vehicle_Type'>
+                        
+                        <option value='FSR'>FSR</option>
+                        <option value="DYNA">DYNA</option>
+                    </select>
+                    <br>
+                    <input type="submit" class='submit'>
+                </form>
+            </div>
+
+            <h1 class='output'>{{word}}<span style='color:red;'>{{result}}</span></h1>
+        </div>
+
+
+
+
+
+            
+
+    
+
+
+        
+
+          
+        
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
